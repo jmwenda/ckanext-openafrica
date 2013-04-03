@@ -1,0 +1,10 @@
+setup.py
+ckanext/__init__.py
+ckanext/openafrica/__init__.py
+ckanext_openafrica.egg-info/PKG-INFO
+ckanext_openafrica.egg-info/SOURCES.txt
+ckanext_openafrica.egg-info/dependency_links.txt
+ckanext_openafrica.egg-info/entry_points.txt
+ckanext_openafrica.egg-info/namespace_packages.txt
+ckanext_openafrica.egg-info/not-zip-safe
+ckanext_openafrica.egg-info/top_level.txt
