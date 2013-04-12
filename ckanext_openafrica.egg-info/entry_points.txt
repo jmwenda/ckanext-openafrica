@@ -2,4 +2,5 @@
         [ckan.plugins]
 	# Add plugins here, eg
 	# myplugin=ckanext.openafrica:PluginClass
+	openafrica=ckanext.openafrica.plugin:OpenAfricaPlugin
 	

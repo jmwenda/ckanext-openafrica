@@ -1,0 +1,61 @@
+/*
+ * Extra css for Open Africa theming.
+ * Author: David Lemayian
+ * Email: david@openinstitute.com
+ *
+ */
+
+/* Base Elements - Header, Footer */
+
+/* Header */
+
+#color-stripes {
+	background: url("/images/color-stripes.png") repeat-x scroll 0% 0% transparent;
+	height: 4px;
+	/*border-bottom: 1px solid rgb(255, 255, 255);*/
+}
+
+.account-masthead {
+	background: #555;
+}
+
+.masthead {
+	background: #fff;
+}
+
+.masthead .content{
+	top: 20px;
+}
+
+.header-image .logo img {
+	height: 75px;
+}
+
+.nav > li > a, .nav > li > a {
+	background-color: #333;
+	color: #fff;
+}
+	.nav > li > a:hover, .nav > li > a:focus {
+		background-color: lightgray;
+		color: #fff;
+	}
+
+.masthead input[type="text"] {
+	border-color: #333;
+}
+
+
+/* Footer */
+.site-footer {
+	background: #555;
+}
+.site-footer, .site-footer label, .site-footer small {
+	color: #fff;
+}
+
+.site-footer a {
+    color: #000;
+}
+
+
+/* End - Base Elements */

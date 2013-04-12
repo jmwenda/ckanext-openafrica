@@ -1,6 +1,7 @@
 setup.py
 ckanext/__init__.py
 ckanext/openafrica/__init__.py
+ckanext/openafrica/plugin.py
 ckanext_openafrica.egg-info/PKG-INFO
 ckanext_openafrica.egg-info/SOURCES.txt
 ckanext_openafrica.egg-info/dependency_links.txt
