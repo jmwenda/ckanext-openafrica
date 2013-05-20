@@ -1,65 +1,18 @@
 /*
- * Extra css for Open Africa theming.
+ * Extra css for Africa Open Data theming.
  * Author: David Lemayian
  * Email: david@openinstitute.com
  *
  */
 
-/* Base Elements - Header, Footer */
+/* Base Elements - Body, Header, Footer */
 
-body {
-	background: #fff;
-}
 
 /* Header */
 
-#color-stripes {
-	background: url("/images/color-stripes.png") repeat-x scroll 0% 0% transparent;
-	height: 4px;
-	border-bottom: 1px solid rgb(255, 255, 255);
-}
-
-.account-masthead {
-	background: #555;
-}
-
-.masthead {
-	background: #fff;
-}
-
-.masthead .content{
-	top: 20px;
-}
-
-.header-image .logo img {
-	height: 75px;
-}
-
-.masthead .nav a {
-	background-color: #fff;
-	color: #333;
-}
-	.masthead .nav a:hover, .masthead .nav a:focus {
-		background-color: #333;
-		color: #fff;
-	}
-
-.masthead input[type="text"] {
-	border-color: #333;
-}
 
 
 /* Footer */
-.site-footer {
-	background: rgb(49, 49, 51);
-}
-.site-footer, .site-footer label, .site-footer small {
-	color: #fff;
-}
-
-.site-footer a {
-    color: #fff;
-}
 
 
 /* End - Base Elements */
