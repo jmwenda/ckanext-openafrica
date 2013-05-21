@@ -61,7 +61,7 @@ class OpenAfricaPlugin(SingletonPlugin):
 
 		# set the title
 		config['ckan.site_title'] = "Open Africa"
-		config['ckan.site_logo'] = "/images/openafrica-logo.png"
+		config['ckan.site_logo'] = ""
 
 		# set the customised package form (see ``setup.py`` for entry point)
 		# config['package_form'] = "example_form"
@@ -119,5 +119,26 @@ class OpenAfricaPlugin(SingletonPlugin):
 		map.connect('/package/new', controller='package_formalchemy', action='new')
 		map.connect('/package/edit/{id}', controller='package_formalchemy', action='edit')"""
 		
-
+		map.connect('/about/terms-and-conditions',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='toc')
+		map.connect('/about/accessibility',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='accessibility')
+		map.connect('/about/code-of-conduct',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='coc')
+		map.connect('/about/moderation-policy',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='moderation')
+		map.connect('/about/faq',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='faq')
+		map.connect('/about/privacy',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='privacy')
+		map.connect('/about/contact-us',
+					controller='ckanext.openafrica.controller:CustomPageController',
+					action='contact')
+		
 		return map

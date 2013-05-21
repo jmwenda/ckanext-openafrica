@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.1.1'
 
 setup(
 	name='ckanext-openafrica',
@@ -24,7 +24,7 @@ setup(
 	],
 	entry_points=\
 	"""
-        [ckan.plugins]
+	[ckan.plugins]
 	# Add plugins here, eg
 	# myplugin=ckanext.openafrica:PluginClass
 	openafrica=ckanext.openafrica.plugin:OpenAfricaPlugin
