@@ -1,0 +1,38 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('About') }}{% endblock %}
+
+{% block breadcrumb_content %}
+	<li class="active">{% link_for _('About'), controller='home', action='about' %}</li>
+{% endblock %}
+
+{% block primary %}
+	<article class="module">
+		<div class="module-content">
+			{% block about %}
+				{% if g.site_about %}
+					{{ h.render_markdown(g.site_about) }}
+				{% else %}
+					<h1 class="page-heading">{{ _('About') }}</h1>
+					{% snippet 'home/snippets/about_text.html' %}
+				{% endif %}
+				<hr />
+				{% block about_links %}
+					{% set api_url = 'http://docs.ckan.org/{0}/{1}/api.html'.format(request.environ.CKAN_LANG, g.ckan_doc_version) %}
+					<p style="text-align: center;">
+						<a href="/about/terms-and-conditions">{{ _('Terms and Conditions') }}</a> | 
+						<a href="/about/accessibility">{{ _('Accessibility') }}</a> | 
+						<a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a> | 
+						<a href="/about/moderation-policy">{{ _('Moderation policy') }}</a> | 
+						<a href="/about/faq">{{ _('FAQ') }}</a> | 
+						<a href="/about/privacy">{{ _('Privacy') }}</a> | 
+						<a href="/about/contact-us">{{ _('Contact us') }}</a> | 
+						<a href="{{ api_url }}" target="_blank">{{ _('API') }}</a>
+					</p>
+				{% endblock %}
+			{% endblock %}
+		</div>
+	</article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
