@@ -60,7 +60,7 @@ class OpenAfricaPlugin(SingletonPlugin):
 		'<link rel="stylesheet" href="/css/extra.css" type="text/css"> '
 
 		# set the title
-		config['ckan.site_title'] = "Open Africa"
+		config['ckan.site_title'] = "Africa Open Data"
 		config['ckan.site_logo'] = ""
 
 		# set the customised package form (see ``setup.py`` for entry point)
