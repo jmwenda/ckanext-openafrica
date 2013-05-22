@@ -16,7 +16,11 @@
 					<h1 class="page-heading">{{ _('About') }}</h1>
 					{% snippet 'home/snippets/about_text.html' %}
 				{% endif %}
-				<hr />
+				<br /><hr />
+				<div class="home-partners">
+					{% snippet 'home/snippets/partners_text.html' %}
+				</div>
+				<hr /> <br />
 				{% block about_links %}
 					{% set api_url = 'http://docs.ckan.org/{0}/{1}/api.html'.format(request.environ.CKAN_LANG, g.ckan_doc_version) %}
 					<p style="text-align: center;">
