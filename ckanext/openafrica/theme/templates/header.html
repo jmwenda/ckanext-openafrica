@@ -1,5 +1,9 @@
 {% block header %}
+	<div style="background-color:#FCF8E3; text-align:center; height">
+		<p style="padding:5px 0; margin-bottom:0px;">We are in BETA. Find a problem? <a href="mailto:beta@openafrica.net">Let us know</a>.</p>
+	</div>
 {% block header_account %}
+
   <header class="account-masthead">
     <div class="container">
       {% if c.userobj %}
@@ -52,6 +56,7 @@
     </div>
   </header>
 {% endblock %}
+
 <header class="masthead">
   {% block header_debug %}
   {% if g.debug and not g.debug_supress_header %}
@@ -83,7 +88,6 @@
             {% block header_site_navigation_tabs %}
             {{ h.build_nav_main(
               ('search', _('Datasets')),
-              ('organizations_index', _('Organizations')),
               ('group_index', _('Groups')),
               ('about', _('About'))
             ) }}
