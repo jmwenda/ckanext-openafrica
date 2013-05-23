@@ -14,13 +14,14 @@
 
 /* Footer */
 
-.c4a-footer-logo img {
+.footer-logo img {
 	height: 70px;
 	background-color: #fff;
 	border-radius: 5px;
 	margin-right: 5px;
+	vertical-align: bottom;
 }
-	.c4a-footer-logo img:hover {
+	.footer-logo img:hover {
 		opacity: 0.8;
 	}
 .ckan-footer-logo {
@@ -32,12 +33,11 @@
 
 
 /* Home Page */
-.home-partners {
+.partner-logos {
 	text-align: center;
 }
-	.home-partners img {
+	.partner-logos img {
 		padding: 5px;
-		margin: 0 5px;
 		border-radius: 5px;
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
@@ -45,6 +45,18 @@
 		-ms-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
 	}
-		.home-partners img:hover {
+		.partner-logos img:hover {
 			opacity: 0.7;
 		}
+	.home.partner-logos img {
+		margin: 0 30px;
+	}
+	.about.partner-logos img {
+		margin: 0 5px;
+	}
+
+
+
+
+
+
