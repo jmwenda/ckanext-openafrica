@@ -38,6 +38,7 @@
 }
 	.partner-logos img {
 		padding: 5px;
+		margin: 0 5px;
 		border-radius: 5px;
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
@@ -48,12 +49,9 @@
 		.partner-logos img:hover {
 			opacity: 0.7;
 		}
-	.home.partner-logos img {
-		margin: 0 30px;
-	}
-	.about.partner-logos img {
-		margin: 0 5px;
-	}
+
+
+
 
 
 
