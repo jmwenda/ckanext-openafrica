@@ -45,18 +45,10 @@
 					<div id="homeSlider" class="carousel slide">
 						<div class="carousel-inner">
 							<div class="item active">
-								<a class="image" href="http://ghana.databootcamp.org/" target="_blank" >
-									<img src="/images/home-slider/dGhana.png" alt="Ghana dBootcamp">
+								<a class="image" href="http://tanzania.databootcamp.org/" target="_blank">
+									<img src="http://codeforafrica.github.com/AfricaOpenData/remote/img/featured/dtz.png" alt="TZ dBootcamp">
 									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("Data Bootcamp Ghana - May 27 to 29, 2013") }}</h2>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a class="image" href="http://nepal.databootcamp.org/" target="_blank" >
-									<img src="/images/home-slider/dNepal.png" alt="Nepal dBootcamp">
-									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("Data Bootcamp Nepal - Jun 3 to 4, 2013") }}</h2>
+										<h2 class="media-heading">Data Bootcamp Tanzania - Oct 18 to 20, 2012</h2>
 									</div>
 								</a>
 							</div>
@@ -69,18 +61,26 @@
 								</a>
 							</div>
 							<div class="item">
-								<a class="image" href="http://southafrica.databootcamp.org/" target="_blank" >
-									<img src="http://codeforafrica.github.com/AfricaOpenData/remote/img/featured/dsa.png" alt="SA dBootcamp">
+								<a class="image" href="http://nepal.databootcamp.org/" target="_blank" >
+									<img src="/images/home-slider/dNepal.png" alt="Nepal dBootcamp">
 									<div class="carousel-caption">
-										<h2 class="media-heading">Data Bootcamp South Africa - Sept 5 to 7, 2012</h2>
+										<h2 class="media-heading">{{ _("Data Bootcamp Nepal - Jun 3 to 4, 2013") }}</h2>
 									</div>
 								</a>
 							</div>
 							<div class="item">
-								<a class="image" href="http://tanzania.databootcamp.org/" target="_blank">
-									<img src="http://codeforafrica.github.com/AfricaOpenData/remote/img/featured/dtz.png" alt="TZ dBootcamp">
+								<a class="image" href="http://ghana.databootcamp.org/" target="_blank" >
+									<img src="/images/home-slider/dGhana.png" alt="Ghana dBootcamp">
 									<div class="carousel-caption">
-										<h2 class="media-heading">Data Bootcamp Tanzania - Oct 18 to 20, 2012</h2>
+										<h2 class="media-heading">{{ _("Data Bootcamp Ghana - May 27 to 29, 2013") }}</h2>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a class="image" href="http://southafrica.databootcamp.org/" target="_blank" >
+									<img src="http://codeforafrica.github.com/AfricaOpenData/remote/img/featured/dsa.png" alt="SA dBootcamp">
+									<div class="carousel-caption">
+										<h2 class="media-heading">Data Bootcamp South Africa - Sept 5 to 7, 2012</h2>
 									</div>
 								</a>
 							</div>
@@ -97,12 +97,15 @@
 			{% block home_secondary_content %}
 					<div class="module module-shallow module-narrow module-dark info box">
 						{% block home_search %}
-							<form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}">
+							<form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
 								<h3 class="heading">{{ _("Search Your Data") }}</h3>
-								<span class="control-group search-giant">
+								<div class="search-input control-group search-giant">
 									<input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('eg. Gold Prices') }}" />
-									<button type="submit" value="{{ _('Search') }}">Submit</button>
-								</span>
+									<button type="submit">
+										<i class="icon-search"></i>
+										<span>{{ _('Search') }}</span>
+									</button>
+				                </div>
 							</form>
 						{% endblock %}
 						{% block home_tags %}
