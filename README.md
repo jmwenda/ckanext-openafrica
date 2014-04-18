@@ -1,4 +1,4 @@
-CKAN Extension for Open Africa
+CKAN Extension for openAFRICA
 ==============================
 
 Site: [Africa Open Data](http://africaopendata.org)
