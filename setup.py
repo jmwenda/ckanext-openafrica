@@ -6,15 +6,15 @@ version = '0.1.1'
 setup(
 	name='ckanext-openafrica',
 	version=version,
-	description="CKAN extension for Open Africa.",
+	description="CKAN extension for openAFRICA.",
 	long_description="""\
 	""",
 	classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
 	keywords='',
-	author='David Lemayian',
-	author_email='david@openinstitute.com',
+	author='Code for Africa',
+	author_email='support@codeforafrica.org',
 	url='http://africaopendata.org',
-	license='MIT Open Licence.',
+	license='GPL v2.',
 	packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
 	namespace_packages=['ckanext', 'ckanext.openafrica'],
 	include_package_data=True,
