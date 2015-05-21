@@ -1,143 +1,18 @@
 {% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
 
 {% block subtitle %}{{ _("Welcome") }}{% endblock %}
 
 {% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
 
 {% block content %}
-	<div role="main" class="hero" style="background: url('/images/mapback.png') center no-repeat; background-size: cover;">
-		<div id="content" class="container">
-			{{ self.flash() }}
-			{{ self.primary_content() }}
-		</div>
-	</div>
-	<div class="main homepage">
-		<div class="container">
-			{{ self.secondary_content() }}
-		</div>
-	</div>
+  <div class="homepage layout-{{ homepage_style }}">
+    <div class="container">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+      {% snippet "home/layout{0}.html".format(homepage_style) %}
+    {% endblock %}
+  </div>
 {% endblock %}
-
-{% block primary_content %}
-	<div class="hero-primary module module-popup">
-		<div class="module-content box">
-			{% block home_primary %}
-				<header>
-					{% if g.site_intro_text %}
-					{{ h.render_markdown(g.site_intro_text) }}
-					{% else %}
-						{% block home_primary_content %}
-							<h1 class="page-heading">{% block home_primary_heading %}{{ _("Welcome to CKAN") }}{% endblock %}</h1>
-							<p>
-							{% block home_primary_text %}
-								{% trans %}This is a nice introductory paragraph about CKAN or the site
-								in general. We don't have any copy to go here yet but soon we will
-								{% endtrans %}
-							{% endblock %}
-							</p>
-						{% endblock %}
-					{% endif %}
-				</header>
-			{% endblock %}
-
-			{% block home_image %}
-				<section class="featured media-overlay">
-					<div id="homeSlider" class="carousel slide">
-						<div class="carousel-inner">
-							<div class="item">
-								<a class="image" href="https://www.facebook.com/events/751990394833815/?ref=22" target="_blank" >
-									<img src="/images/home-slider/pressbreakfast.png" alt="SA PressBreakfast">
-									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("PRESS BREAKFAST - Resources & Tech Support for African Data Journalism Projects - Monday, April 14 at 7:45am - 9:30am in UTC+02") }}</h2>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a class="image" href="http://nigeria.dbootcamp.org/" target="_blank" >
-									<img src="/images/home-slider/dNigeria.png" alt="Open Data Day Health Hackathon">
-									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("Open Data Day Health Hackathon, Lagos Nigeria - Feb 22, 2014") }}</h2>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a class="image" href="http://malawi.databootcamp.org/" target="_blank" >
-									<img src="/images/home-slider/dMalawi.png" alt="Malawi dBootcamp">
-									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("Data Bootcamp Malawi - Jun 12 to 14, 2013") }}</h2>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a class="image" href="http://nepal.databootcamp.org/" target="_blank" >
-									<img src="/images/home-slider/dNepal.png" alt="Nepal dBootcamp">
-									<div class="carousel-caption">
-										<h2 class="media-heading">{{ _("Data Bootcamp Nepal - Jun 3 to 4, 2013") }}</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<a class="left carousel-control" href="#homeSlider" data-slide="prev">‹</a>
-						<a class="right carousel-control" href="#homeSlider" data-slide="next">›</a>
-					</div>
-				</section>
-				<script type="text/javascript">
-					window.onload = function () {
-						$('#homeSlider').carousel();
-					}
-				</script>
-			{% endblock %}
-		</div>
-	</div>
-	<div class="hero-secondary">
-		<div class="hero-secondary-inner">
-			{% block home_secondary_content %}
-					<div class="module module-shallow module-narrow module-dark info box">
-						{% block home_search %}
-							<form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
-								<h3 class="heading">{{ _("Search Africa Open Data") }}</h3>
-								<div class="search-input control-group search-giant">
-									<input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('eg. Budget') }}" />
-									<button type="submit">
-										<i class="icon-search"></i>
-										<span>{{ _('Search') }}</span>
-									</button>
-				                </div>
-							</form>
-						{% endblock %}
-						{% block home_tags %}
-							<div class="tags">
-								<h3>{{ _('Popular Tags') }}</h3>
-								{% set tags = h.get_facet_items_dict('tags', limit=3) %}
-								{% for tag in tags %}
-									<a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-								{% endfor %}
-							</div>
-						{% endblock %}
-					</div>
-			{% endblock %}
-		</div>
-	</div>
-{% endblock %}
-
-{% block secondary_content %}
-	<div class="row group-listing">
-		{% for group in c.group_package_stuff %}
-			<div class="span6">
-				<div class="box">
-					{% snippet 'snippets/group_item.html', group=group.group_dict, truncate=100 %}
-				</div>
-			</div>
-		{% endfor %}
-	</div>
-	
-	<hr />
-	
-	<div class="home partner-logos">
-		{% snippet 'home/snippets/home_partner_logos.html' %}
-	</div>
-{% endblock %}
-
-
-{# Remove the toolbar. #}
-{% block toolbar %}{% endblock %}
