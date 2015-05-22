@@ -8,14 +8,14 @@
 {% endblock %}
 
 {% block primary %}
-	<article class="module">
-		<div class="module-content">
-			{% block toc %}
+  <article class="module">
+    <div class="module-content">
+      {% block accessibility %}
 				<h1 class="page-heading">{{ _('Accessibility') }}</h1>
 				{% snippet 'home/snippets/accessibility_text.html' %}
 			{% endblock %}
-		</div>
-	</article>
+    </div>
+  </article>
 {% endblock %}
 
 {% block secondary %}{% endblock %}
