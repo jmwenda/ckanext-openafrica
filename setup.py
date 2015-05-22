@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.2.0'
+version = '0.3.0'
 
 setup(
 	name='ckanext-openafrica',
@@ -13,7 +13,7 @@ setup(
 	keywords='',
 	author='Code for Africa',
 	author_email='support@codeforafrica.org',
-	url='http://africaopendata.org',
+	url='http://openafrica.net',
 	license='GPL v2.',
 	packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
 	namespace_packages=['ckanext', 'ckanext.openafrica'],

@@ -1,7 +1,7 @@
-CKAN Extension for openAFRICA
-==============================
+openAFRICA CKAN Extension
+=========================
 
-Site: [Africa Open Data](http://africaopendata.org)
-Version: 0.1
+Site: [openAFRICA](http://openAFRICA.net)
+Version: 0.3.0
 
-
+Currently on customises the look and feel in very basic ways.
