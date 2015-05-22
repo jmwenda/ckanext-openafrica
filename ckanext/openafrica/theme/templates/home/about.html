@@ -18,17 +18,21 @@
         {% endif %}
 
         <br /><hr />
-        <div class="row">
-          <div class="span3">
-            <h3>Partners</h3>
-            <p>openAFRICA has been made possible through support from the following partners:</p>
-          </div>
-          <div class="span9">
-            <div class="partner-logos">
-              {% snippet 'home/snippets/about_partner_logos.html' %}
+        
+        <div class="container">
+          <div class="row">
+            <div class="span3">
+              <h3>Partners</h3>
+              <p>openAFRICA has been made possible through support from the following partners:</p>
+            </div>
+            <div class="span9">
+              <div class="partner-logos">
+                {% snippet 'home/snippets/about_partner_logos.html' %}
+              </div>
             </div>
           </div>
         </div>
+        
         <hr /><br />
         {% block about_links %}
           {% set api_url = 'http://docs.ckan.org/{0}/{1}/api.html'.format(request.environ.CKAN_LANG, g.ckan_doc_version) %}
