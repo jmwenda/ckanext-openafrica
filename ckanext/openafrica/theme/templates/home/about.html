@@ -18,23 +18,31 @@
         {% endif %}
 
         <br /><hr />
-				<div class="about partner-logos">
-					{% snippet 'home/snippets/about_partner_logos.html' %}
-				</div>
-				<hr /> <br />
-				{% block about_links %}
-					{% set api_url = 'http://docs.ckan.org/{0}/{1}/api.html'.format(request.environ.CKAN_LANG, g.ckan_doc_version) %}
-					<p style="text-align: center;">
-						<a href="/about/terms-and-conditions">{{ _('Terms and Conditions') }}</a> | 
-						<a href="/about/accessibility">{{ _('Accessibility') }}</a> | 
-						<a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a> | 
-						<a href="/about/moderation-policy">{{ _('Moderation policy') }}</a> | 
-						<a href="/about/faq">{{ _('FAQ') }}</a> | 
-						<a href="/about/privacy">{{ _('Privacy') }}</a> | 
-						<a href="/about/contact-us">{{ _('Contact us') }}</a> | 
-						<a href="{{ api_url }}" target="_blank">{{ _('API') }}</a>
-					</p>
-				{% endblock %}
+        <div class="row">
+          <div class="span3">
+            <h3>Partners</h3>
+            <p>openAFRICA has been made possible through support from the following partners:</p>
+          </div>
+          <div class="span9">
+            <div class="partner-logos">
+              {% snippet 'home/snippets/about_partner_logos.html' %}
+            </div>
+          </div>
+        </div>
+        <hr /><br />
+        {% block about_links %}
+          {% set api_url = 'http://docs.ckan.org/{0}/{1}/api.html'.format(request.environ.CKAN_LANG, g.ckan_doc_version) %}
+          <p style="text-align: center;">
+            <a href="/about/terms-and-conditions">{{ _('Terms and Conditions') }}</a> | 
+            <a href="/about/accessibility">{{ _('Accessibility') }}</a> | 
+            <a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a> | 
+            <a href="/about/moderation-policy">{{ _('Moderation policy') }}</a> | 
+            <a href="/about/faq">{{ _('FAQ') }}</a> | 
+            <a href="/about/privacy">{{ _('Privacy') }}</a> | 
+            <a href="/about/contact-us">{{ _('Contact us') }}</a> | 
+            <a href="{{ api_url }}" target="_blank">{{ _('API') }}</a>
+          </p>
+        {% endblock %}
 
       {% endblock %}
     </div>
